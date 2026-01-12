@@ -107,14 +107,6 @@ body {
 	background-position: center center;
 }
 
-
-#snow {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-}
-
 .overlay {
 	display: flex;
 	justify-content: center;
@@ -276,11 +268,25 @@ div#top {
 }
 
 @media screen and (max-width: 540px) {
+	.overlay {
+		height: 90vh;
+	}
 	main {
 		right: 0;
-		top: 40vh;
 	}
 }
+
+  @media screen and (max-width: 540px) {
+    header {
+      height: auto;
+      transform: scale(0.75);
+			min-width: 574px;
+    }
+
+    .header__inner {
+    	position: relative;
+    }
+	}
 
 @media screen and (max-height: 450px) {
 	.main__content {
