@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Header from "../components/Header.astro";
+
+const today = new Date();
+
+import Image from "astro/components/Image.astro";
+import macbtn from "../assets/88x31/macbutton.gif";
+import firefoxbtn from "../assets/88x31/firefox.gif";
+import astrobtn from "../assets/88x31/astro.png";
+import archlinux from "../assets/88x31/archlinux.gif";
+import chan from "../assets/88x31/blink-0.gif";
+---
+
+<Layout title={"Links"}>
+  <div class="wrapper">
+    <div class="overlay">
+      <Header />
+      <main>
+        <aside transition:name="hero">
+          <div class="urltext">
+            <a
+              href="/"
+              class="navigurl"
+              title="click to return to the index page"
+              >index &raquo;
+            </a>
+            links
+            <div id="close">
+              <a href="/" title="close and return to menu">X</a>
+            </div>
+          </div>
+          <div class="main__content">
+            <a name="top"></a>
+            <div class="titleblock">...you can find me here</div>
+            <div>
+              <a href="https://github.com/TheFreo">My GitHub</a>
+              <br />
+              <a href="http://ovk.to/freo">My OpenVK page</a>
+              <br />
+              <a href="https://forum.veselcraft.ru/member.php?u=10"
+                >My Veselcraft forum page</a
+              >
+              <br />
+              <a href="https://shikimori.one/TheFreo">My Shikimori</a>
+            </div>
+            <div class="titleblock">Projects</div>
+            <div>
+              <a href="https://weather.thefreo.ru">miniWeather</a>
+              <br />
+              <a href="http://old.thefreo.ru">My oldweb website</a>
+              <br />
+              <a href="https://virus.thefreo.ru">My meme page :)</a>
+              <br />
+              <a href="https://github.com/TheFreo/shikimori-activity-table"
+                >Shikimori Activity Table</a
+              >
+            </div>
+            <div class="titleblock">My Button</div>
+            <div class="mybtn">
+              <img src="http://thefreo.ru/88x31.png" alt="TheFreo" />
+              <p>
+                &lt;a href="http://old.thefreo.ru/" title=""
+                target="_black"&gt;&lt;img src="http://thefreo.ru/88x31.png"
+                alt="TheFreo"&gt;&lt;/a&gt;
+              </p>
+            </div>
+            <div class="titleblock">Buttons</div>
+            <center style="line-height: 2.4;">
+              <a href="https://smokepowered.com/"
+                ><img src="https://smokepowered.com/smoke.gif" alt="" /></a
+              >
+              <a href="https://astro.build"><Image src={astrobtn} alt="" /></a>
+              <Image src={macbtn} alt="" />
+              <a href="https://firefox.com"><Image src={firefoxbtn} alt="" /></a
+              >
+              <Image src={chan} alt="" />
+              <a href="https://archlinux.org"
+                ><Image src={archlinux} alt="" /></a
+              >
+            </center>
+            <center>
+              <br />
+              &copy;{today.getFullYear()}, Crafted by
+              <a href="https://github.com/TheFreo/about">TheFreo</a>
+            </center>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </div>
+</Layout>

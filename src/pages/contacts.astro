@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Header from "../components/Header.astro";
+---
+
+<Layout title={"Contacts"}>
+  <div class="wrapper">
+    <div class="overlay">
+      <Header />
+      <main>
+        <aside transition:name="hero">
+          <div class="urltext">
+            <a
+              href="/"
+              class="navigurl"
+              title="click to return to the index page"
+              >index &raquo;
+            </a>
+            contacts
+            <div id="close">
+              <a href="/" title="close and return to menu">X</a>
+            </div>
+          </div>
+          <div class="main__content">
+            <a name="top"></a>
+            <div class="titleblock">...if you need to contact me urgently</div>
+            Email:
+            <br />&nbsp;&nbsp;<a href="mailto:me@thefreo.ru">me@thefreo.ru</a>
+            <br /><span style="font-size:6px"><br /></span>
+            Telegram:
+            <br />&nbsp;&nbsp;<a href="https://t.me/thefreo">@thefreo</a>
+<br /><span style="font-size:6px"><br /></span>
+            XMPP:
+            <br />&nbsp;&nbsp;<a>freo@jabber.ru</a>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </div>
+</Layout>

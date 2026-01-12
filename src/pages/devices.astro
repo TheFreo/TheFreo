@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Header from "../components/Header.astro";
+---
+
+<Layout title={"Devices"}>
+  <div class="wrapper">
+    <div class="overlay">
+      <Header />
+      <main>
+        <aside transition:name="hero">
+          <div class="urltext">
+            <a
+              href="/"
+              class="navigurl"
+              title="click to return to the index page"
+              >index &raquo;
+            </a>
+            devices
+            <div id="close">
+              <a href="/" title="close and return to menu">X</a>
+            </div>
+          </div>
+          <div class="main__content">
+            <a name="top"></a>
+            <div class="titleblock">...what I'm working on</div>
+            <div>
+              <b>Main PC</b>
+              <br>
+              <br>
+              <ul>
+                <li>&nbsp;&nbsp;OS: Windows 10 LTSC &amp;&amp; Arch Linux</li>
+                <li>&nbsp;&nbsp;CPU: Amd Ryzen 5500</li>
+                <li>&nbsp;&nbsp;GPU: Nvidia Geforce GTX 1660 Super</li>
+                <li>&nbsp;&nbsp;RAM: 16 GB</li>
+              </ul>
+              <br>
+              <b>Laptop (Matebook D14)</b>
+              <br>
+              <br>
+              <ul>
+                <li>&nbsp;&nbsp;OS: macOS Monterey 12.4</li>
+                <li>&nbsp;&nbsp;CPU: Intel Core i5-10210U</li>
+                <li>&nbsp;&nbsp;GPU: Intel UHD Graphics 620</li>
+                <li>&nbsp;&nbsp;RAM: 8 GB</li>
+              </ul>
+              <br>
+              <b>Home server (Mac Mini 2011)</b>
+              <br>
+              <br>
+              <ul>
+                <li>&nbsp;&nbsp;OS: Arch Linux</li>
+                <li>&nbsp;&nbsp;CPU: Intel Core i5-2415m</li>
+                <li>&nbsp;&nbsp;HDD: 500 GB</li>
+                <li>&nbsp;&nbsp;RAM: 12 GB</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </div>
+</Layout>

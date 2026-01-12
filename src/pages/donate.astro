@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Header from "../components/Header.astro";
+---
+
+<Layout title={"Donate"}>
+  <div class="wrapper">
+    <div class="overlay">
+      <Header />
+      <main>
+        <aside transition:name="hero">
+          <div class="urltext">
+            <a
+              href="/"
+              class="navigurl"
+              title="click to return to the index page"
+              >index &raquo;
+            </a>
+            donate
+            <div id="close">
+              <a href="/" title="close and return to menu">X</a>
+            </div>
+          </div>
+          <div class="main__content">
+            <a name="top"></a>
+            <div class="titleblock">
+              ...if you want to support me (I don't know why)
+            </div>
+            <div style="width: 100%">
+              <b>BTC</b>: bc1qkul92q5slnhved4965cnth54uy09y5lnp2xs28
+              <br />
+              <b>TON</b>: UQCrGKJBOvUl0PMbHGryBXO04wvRrazJ3F5iYWbSHvO55qCh
+              <br />
+              <b>ETH</b>: 0x9C86c8b05FAE2eBF44e95Da52B9140Da94838Fa9
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </div>
+</Layout>

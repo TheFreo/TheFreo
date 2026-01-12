@@ -1,26 +1,26 @@
 ---
-import '../styles/style.css';
-
-import { getLangFromUrl } from '../i18n/utils';
-
-const lang = getLangFromUrl(Astro.url);
+import "../styles/style.css";
+// import Snow from "../components/Snow.astro";
+import { ClientRouter } from "astro:transitions";
+const { title } = Astro.props;
 ---
+
 <!doctype html>
-<html lang={lang}>
+<html lang="en">
 	<head>
-		<meta charset="UTF-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<meta name="author" content="TheFreo | https://github.com/TheFreo">
-    	<meta name="description" content="Personal website of TheFreo">
-    	<link rel="mask-icon" href="/fav.png" color="#FFF">
-    	<link rel="icon" type="image/x-icon" href='/fav.png'>
-		<link rel="preload" href="style.css" as="style" />
-		<link rel="preload" href="/fonts/NTSomic-Regular.woff" as="font" type="font/woff" crossorigin />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="author" content="TheFreo | https://github.com/TheFreo" />
+		<meta name="description" content="Personal website of TheFreo" />
+		<link rel="mask-icon" href="/fav.png" color="#FFF" />
+		<link rel="icon" type="image/x-icon" href="/fav.png" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
 		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
-		<title>TheFreo</title>
+		<title>{title}</title>
+		<ClientRouter />
 	</head>
 	<body>
+		<!-- <Snow /> -->
 		<slot />
 	</body>
 </html>
