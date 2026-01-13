@@ -1,16 +1,17 @@
 {
   "name": "thefreo",
   "type": "module",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
-    "astro": "^5.16.3"
+    "astro": "^5.16.9",
+    "pure-snow.js": "^2.1.0"
   },
   "devDependencies": {
     "prettier": "^3.7.4",

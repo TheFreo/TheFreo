@@ -276,17 +276,17 @@ div#top {
 	}
 }
 
-  @media screen and (max-width: 540px) {
-    header {
-      height: auto;
-      transform: scale(0.75);
-			min-width: 574px;
-    }
-
-    .header__inner {
-    	position: relative;
-    }
+@media screen and (max-width: 540px) {
+	header {
+		height: auto;
+		transform: scale(0.75);
+		min-width: 574px;
 	}
+
+	.header__inner {
+		position: relative;
+	}
+}
 
 @media screen and (max-height: 450px) {
 	.main__content {

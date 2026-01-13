@@ -40,12 +40,13 @@ import avatar from "../assets/avatar.gif";
                 </center>
               </div>
               <p>
-                Hello! My name is Artem, also known as TheFreo. I am a <span id="myAge"></span>
-                year-old front-end developer. I mainly write websites on a
-                freelance basis and sometimes mini projects that can be found on
-                my GitHub. I am also interested in self-hosting. I speak
-                Russian, English, and Ukrainian. My favorite music genres are
-                ambient, IDM, and rock (any kind).
+                Hello! My name is Artem, also known as TheFreo. I am a <span
+                  id="myAge"></span>
+                year-old front-end developer. I mainly write websites on a freelance
+                basis and sometimes mini projects that can be found on my GitHub.
+                I am also interested in self-hosting. I speak Russian, English, and
+                Ukrainian. My favorite music genres are ambient, IDM, and rock (any
+                kind).
               </p>
             </div>
             <div class="titleblock">Skills</div>
@@ -66,11 +67,9 @@ import avatar from "../assets/avatar.gif";
     </div>
   </div>
 </Layout>
-<script>
-		var today = new Date();
-		var bday = new Date("15 June 2005");
-		var years = today - bday;
-		myAge.textContent = new Date(years).getFullYear() - 1970;
-
-		console.log("What are you doing here?");
+<script data-astro-rerun>
+  var today = new Date();
+  var bday = new Date("15 June 2005");
+  var years = today - bday;
+  myAge.textContent = new Date(years).getFullYear() - 1970;
 </script>
