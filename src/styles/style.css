@@ -255,6 +255,10 @@ div#top {
 	object-fit: contain;
 }
 
+.btnlinks a:hover {
+	text-decoration: none;
+}
+
 @media screen and (max-width: 660px) {
 	main {
 		width: -moz-available;
@@ -274,9 +278,6 @@ div#top {
 	main {
 		right: 0;
 	}
-}
-
-@media screen and (max-width: 540px) {
 	header {
 		height: auto;
 		transform: scale(0.75);
@@ -285,6 +286,30 @@ div#top {
 
 	.header__inner {
 		position: relative;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.desc {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 390px) {
+	header {
+		transform: scale(0.68);
+	}
+}
+
+@media screen and (max-width: 361px) {
+	header {
+		transform: scale(0.66);
+	}
+}
+
+@media screen and (max-width: 331px) {
+	header {
+		transform: scale(0.6);
 	}
 }
 

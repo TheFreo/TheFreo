@@ -27,9 +27,9 @@ import avatar from "../assets/avatar.gif";
             <a name="top"></a>
             <div class="titleblock">Welcome to my website!</div>
             <div class="desc">
-              <div>
+              <center>
                 <Image src={avatar} alt="" />
-                <center>
+                <div>
                   <a href="https://www.imood.com/users/freo">
                     <img
                       style="width: auto;height: 18px;"
@@ -37,8 +37,8 @@ import avatar from "../assets/avatar.gif";
                       alt="The current mood of freo at www.imood.com"
                     />
                   </a>
-                </center>
-              </div>
+                </div>
+              </center>
               <p>
                 Hello! My name is Artem, also known as TheFreo. I am a <span
                   id="myAge"></span>
@@ -68,8 +68,8 @@ import avatar from "../assets/avatar.gif";
   </div>
 </Layout>
 <script data-astro-rerun>
-  var today = new Date();
-  var bday = new Date("15 June 2005");
-  var years = today - bday;
+  let today = new Date();
+  const bday = new Date("15 June 2005");
+  let years = today - bday;
   myAge.textContent = new Date(years).getFullYear() - 1970;
 </script>

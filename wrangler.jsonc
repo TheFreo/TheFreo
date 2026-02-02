@@ -2,7 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "about",
   // Update to today's date
-  "compatibility_date": "2025-03-25",
+  "compatibility_date": "2026-01-31",
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page" // If you have a custom `src/pages/404.astro` page

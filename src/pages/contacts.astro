@@ -32,10 +32,21 @@ import Header from "../components/Header.astro";
             <br />&nbsp;&nbsp;<a href="https://t.me/thefreo">@thefreo</a>
             <br /><span style="font-size:6px"><br /></span>
             XMPP:
-            <br />&nbsp;&nbsp;<a>freo@jabber.ru</a>
+            <br /><div style="display: flex;">&nbsp;&nbsp;<a id="copy">freo@jabber.ru</a>&nbsp;&nbsp;<p id="copy-ms" style="color: var(--accent)"></p></div>
           </div>
         </aside>
       </main>
     </div>
   </div>
 </Layout>
+
+<script data-astro-rerun>
+  let copyText = document.querySelector('#copy')
+  let message = document.querySelector('#copy-ms')
+    document.querySelector('#copy').addEventListener('click', () => {
+    navigator.clipboard.writeText(copyText.text)
+      .then(() => {
+        message.innerHTML += 'copied!'
+      })
+    })
+</script>
