@@ -11,6 +11,8 @@
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
     "astro": "^5.16.9",
+    "node-addon-api": "^8.7.0",
+    "node-gyp": "^12.2.0",
     "pure-snow.js": "^2.1.0"
   },
   "devDependencies": {
