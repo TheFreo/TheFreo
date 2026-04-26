@@ -1,0 +1,15 @@
+---
+---
+<script>
+  document.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('copy-btn')) return;
+
+    const container = e.target.closest('.copy-container');
+    const text = container.querySelector('.copy-text').innerText;
+    const message = container.querySelector('.copy-msg');
+
+    navigator.clipboard.writeText(text).then(() => {
+      message.textContent = 'copied!';
+    });
+  });
+</script>

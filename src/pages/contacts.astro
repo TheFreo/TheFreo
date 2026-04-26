@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
 import Header from "../components/Header.astro";
+import Copyscript from "../components/copyscript.astro";
 ---
 
 <Layout title={"Contacts"}>
@@ -32,7 +32,7 @@ import Header from "../components/Header.astro";
             <br />&nbsp;&nbsp;<a href="https://t.me/thefreo">@thefreo</a>
             <br /><span style="font-size:6px"><br /></span>
             XMPP:
-            <br /><div style="display: flex;">&nbsp;&nbsp;<a id="copy">freo@jabber.ru</a>&nbsp;&nbsp;<p id="copy-ms" style="color: var(--accent)"></p></div>
+            <br /><div class="copy-container" style="display: flex;">&nbsp;&nbsp;<a class="copy-btn copy-text">freo@jabber.ru</a>&nbsp;&nbsp;<p class="copy-msg" style="color: var(--accent)"></p></div>
           </div>
         </aside>
       </main>
@@ -40,13 +40,4 @@ import Header from "../components/Header.astro";
   </div>
 </Layout>
 
-<script data-astro-rerun>
-  let copyText = document.querySelector('#copy')
-  let message = document.querySelector('#copy-ms')
-    document.querySelector('#copy').addEventListener('click', () => {
-    navigator.clipboard.writeText(copyText.text)
-      .then(() => {
-        message.innerHTML += 'copied!'
-      })
-    })
-</script>
+<Copyscript />

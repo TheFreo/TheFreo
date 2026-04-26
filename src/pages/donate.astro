@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
 import Header from "../components/Header.astro";
+import Copyscript from "../components/copyscript.astro";
 ---
 
 <Layout title={"Donate"}>
@@ -27,12 +27,14 @@ import Header from "../components/Header.astro";
             <div class="titleblock">
               ...if you want to support me (I don't know why)
             </div>
-            <div style="width: 100%; overflow-x: auto;">
-              <b>BTC</b>: bc1qkul92q5slnhved4965cnth54uy09y5lnp2xs28
+            <div style="max-width: 625px; overflow-x: auto; text-overflow: ellipsis; white-space: nowrap;">
+              <div class="copy-container"><p class="i-token-btc"></p><b>BTC:</b><a class="copy-btn copy-text">bc1qkul92q5slnhved4965cnth54uy09y5lnp2xs28</a>&nbsp;&nbsp;<p class="copy-msg" style="color: var(--accent)"></p></div>
               <br />
-              <b>TON</b>: UQCrGKJBOvUl0PMbHGryBXO04wvRrazJ3F5iYWbSHvO55qCh
+              <div class="copy-container"><p class="i-token-ton"></p><b>TON:</b><a class="copy-btn copy-text">UQCrGKJBOvUl0PMbHGryBXO04wvRrazJ3F5iYWbSHvO55qCh</a>&nbsp;&nbsp;<p class="copy-msg" style="color: var(--accent)"></p></div>
               <br />
-              <b>ETH</b>: 0x9C86c8b05FAE2eBF44e95Da52B9140Da94838Fa9
+              <div class="copy-container"><p class="i-token-eth"></p><b>ETH:</b><a class="copy-btn copy-text">0x9C86c8b05FAE2eBF44e95Da52B9140Da94838Fa9</a>&nbsp;&nbsp;<p class="copy-msg" style="color: var(--accent)"></p></div>
+              <br />
+              <div class="copy-container"><p class="i-token-xmr"></p><b>XMR:</b><a class="copy-btn copy-text">46YESmusZDLBu7AXwXvNXNXdjphiD9MvECxuVkftnKjXdBK8ESYib3vWxB5RTnpVnme1xwK6mturEj9ey4PS77b49CYuEph</a>&nbsp;&nbsp;<p class="copy-msg" style="color: var(--accent)"></p></div>
             </div>
           </div>
         </aside>
@@ -40,3 +42,5 @@ import Header from "../components/Header.astro";
     </div>
   </div>
 </Layout>
+
+<Copyscript />
