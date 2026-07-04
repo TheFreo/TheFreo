@@ -1,17 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
 import Header from "../components/Header.astro";
 
 const today = new Date();
 
 import Image from "astro/components/Image.astro";
-import macbtn from "../assets/88x31/macbutton.gif";
-import firefoxbtn from "../assets/88x31/firefox.gif";
-import astrobtn from "../assets/88x31/astro.png";
-import linux from "../assets/88x31/linux.gif";
-import hl from "../assets/88x31/hl.png";
-import chan from "../assets/88x31/blink-0.gif";
 ---
 
 <Layout title={"Links"}>
@@ -26,7 +19,7 @@ import chan from "../assets/88x31/blink-0.gif";
               class="navigurl"
               title="click to return to the index page">index &raquo;</a
             >
-            links
+            &nbsp;links
             <div id="close">
               <a href="/" title="close and return to menu">X</a>
             </div>
@@ -72,25 +65,34 @@ import chan from "../assets/88x31/blink-0.gif";
             </div>
             <div class="titleblock">Buttons</div>
             <center class="btnlinks" style="line-height: 2.4;">
-              <Image src={chan} alt="" />
+              <img src="88x31/blink-0.gif" alt="" />
+              &nbsp;
               <a href="https://half-life.com">
-                <Image src={hl} alt="" />
+                <img src="88x31/hl.png" alt="" />
               </a>
+              &nbsp;
               <a href="https://astro.build">
-                <Image src={astrobtn} alt="" />
+                <img src="88x31/astro.png" alt="" />
               </a>
+              &nbsp;
               <a href="https://firefox.com">
-                <Image src={firefoxbtn} alt="" />
+                <img src="88x31/firefox.gif" alt="" />
               </a>
-              <Image src={macbtn} alt="" />
+              &nbsp;
+              <a href="https://artixlinux.org">
+                <img src="88x31/Artix.gif" alt="" />
+              </a>
+              &nbsp;
               <a href="https://kernel.org">
-                <Image src={linux} alt="" />
+                <img src="88x31/linux.gif" alt="" />
               </a>
+              &nbsp;
+              <img src="88x31/macbutton.gif" alt="" />
+              &nbsp;
             </center>
             <center>
               <br />
-              &copy;{today.getFullYear()}, Crafted by
-              <a href="https://github.com/TheFreo/TheFreo">TheFreo</a>
+              &copy;{today.getFullYear()}, Crafted by <a href="https://github.com/TheFreo/TheFreo">TheFreo</a>
             </center>
           </div>
         </aside>

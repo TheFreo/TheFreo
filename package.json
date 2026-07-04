@@ -9,8 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.12",
-    "astro": "^5.16.9",
+    "@astrojs/cloudflare": "^14.1.1",
+    "astro": "^7.0.6",
     "node-addon-api": "^8.7.0",
     "node-gyp": "^12.2.0",
     "pure-snow.js": "^2.1.0"
