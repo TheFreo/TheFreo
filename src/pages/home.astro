@@ -66,8 +66,10 @@ import Header from "../components/Header.astro";
   </div>
 </Layout>
 <script data-astro-rerun>
-  let today = new Date();
-  const bday = new Date("15 June 2005");
-  let years = today - bday;
-  myAge.textContent = new Date(years).getFullYear() - 1970;
+  document.addEventListener('astro:page-load', () => {
+    let today = new Date();
+    const bday = new Date("15 June 2005");
+    let years = today - bday;
+    myAge.textContent = new Date(years).getFullYear() - 1970;
+  });
 </script>

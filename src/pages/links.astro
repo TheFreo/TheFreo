@@ -57,10 +57,7 @@ import Image from "astro/components/Image.astro";
             <div class="titleblock">Webring</div>
             <div>
               <center>
-                <div id='OtakuRing'>
-                <script type="text/javascript" src="https://bishoujopalace.neocities.org/WebRing/onionring/onionring-variables.js"></script>
-                <script type="text/javascript" src="https://bishoujopalace.neocities.org/WebRing/onionring/onionring-widget.js"></script>
-                <script>document.getElementById('Icon').src="https://thefreo.moe/wr.gif";</script></div>
+                <div id='OtakuRing'></div>
               </center>
             </div>
             <div class="titleblock">My Button</div>
@@ -110,3 +107,11 @@ import Image from "astro/components/Image.astro";
     </div>
   </div>
 </Layout>
+
+<script data-astro-rerun type="text/javascript" src="https://bishoujopalace.neocities.org/WebRing/onionring/onionring-variables.js"></script>
+<script data-astro-rerun type="text/javascript" src="https://bishoujopalace.neocities.org/WebRing/onionring/onionring-widget.js"></script>
+<script data-astro-rerun>
+  document.addEventListener('astro:page-load', () => {
+    document.getElementById('Icon').src="https://thefreo.moe/wr.gif";
+  });
+</script>
