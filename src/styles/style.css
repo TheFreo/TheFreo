@@ -321,6 +321,19 @@ div#top {
   mask-size:100% 100%
 }
 
+#listening {
+	display: flex;
+	justify-content: center;
+	text-align: left;
+}
+
+#trackInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 5px 0px 5px 10px;
+}
+
 @media screen and (max-width: 660px) {
 	main {
 		width: -moz-available;

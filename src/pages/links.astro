@@ -48,8 +48,6 @@ import Image from "astro/components/Image.astro";
             </div>
             <div class="titleblock">Friends</div>
             <div>
-              <a href="https://bitsel.xyz">bitsel</a>
-              <br />
               <a href="https://honolula.neocities.org">honolula</a>
               <br />
               <a href="https://gamberetto.top">gamberetto</a>
@@ -71,7 +69,9 @@ import Image from "astro/components/Image.astro";
             </div>
             <div class="titleblock">Buttons</div>
             <center class="btnlinks" style="line-height: 2.4;">
-              <img src="88x31/blink-0.gif" alt="" />
+              <a href="https://yabloko.ru/" target="_black">
+                <img src="http://web.archive.org/web/20040615182619im_/http://yabloko.ru/banners/banner_yabloko_ru_88x31.gif" alt="Партия Яблоко. За мир и свободу">
+              </a>
               &nbsp;
               <a href="https://half-life.com">
                 <img src="88x31/hl.png" alt="" />
@@ -79,10 +79,6 @@ import Image from "astro/components/Image.astro";
               &nbsp;
               <a href="https://astro.build">
                 <img src="88x31/astro.png" alt="" />
-              </a>
-              &nbsp;
-              <a href="https://firefox.com">
-                <img src="88x31/firefox.gif" alt="" />
               </a>
               &nbsp;
               <a href="https://artixlinux.org">
@@ -95,7 +91,9 @@ import Image from "astro/components/Image.astro";
               &nbsp;
               <img src="88x31/macbutton.gif" alt="" />
               &nbsp;
-              <a href="https://www.ionic1k.net/"><img src="https://www.ionic1k.net/assets/ionet.gif" alt="ionic1k"></a>
+              <a href="https://www.ionic1k.net/">
+                <img src="https://www.ionic1k.net/assets/ionet.gif" alt="ionic1k">
+              </a>
             </center>
             <center>
               <br />
@@ -108,8 +106,22 @@ import Image from "astro/components/Image.astro";
   </div>
 </Layout>
 
-<script data-astro-rerun type="text/javascript" src="https://bishoujopalace.neocities.org/WebRing/onionring/onionring-variables.js"></script>
-<script data-astro-rerun type="text/javascript" src="https://bishoujopalace.neocities.org/WebRing/onionring/onionring-widget.js"></script>
+<script data-astro-rerun type="text/javascript">
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.async = false;
+      s.onload = resolve;
+      s.onerror = reject;
+      document.head.appendChild(s);
+    });
+  }
+
+  loadScript('https://bishoujopalace.neocities.org/WebRing/onionring/onionring-variables.js')
+    .then(() => loadScript('https://bishoujopalace.neocities.org/WebRing/onionring/onionring-widget.js'));
+</script>
+
 <script data-astro-rerun>
   document.addEventListener('astro:page-load', () => {
     document.getElementById('Icon').src="https://thefreo.moe/wr.gif";

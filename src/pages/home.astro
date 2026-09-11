@@ -59,6 +59,10 @@ import Header from "../components/Header.astro";
               <i class="devicon-vscode-plain"></i>
               <i class="devicon-docker-plain"></i>
             </div>
+            <div class="titleblock">Recent tracks</div>
+            <center>
+              <div id="listening"></div>
+            </center> 
           </div>
         </aside>
       </main>
@@ -71,5 +75,30 @@ import Header from "../components/Header.astro";
     const bday = new Date("15 June 2005");
     let years = today - bday;
     myAge.textContent = new Date(years).getFullYear() - 1970;
+  });
+</script>
+
+<script data-astro-rerun>
+  document.addEventListener('astro:page-load', () => {
+    const BASE_URL = `https://lastfm-last-played.biancarosa.com.br/coctura/latest-song`;
+
+    const getTrack = async () => {
+        const request = await fetch(BASE_URL);
+        const json = await request.json();
+        let status
+
+        let isPlaying = json.track['@attr']?.nowplaying || false;
+
+        document.getElementById("listening").innerHTML = `
+        <img src="${json.track.image[1]['#text']}">
+        <div id="trackInfo">
+        <b id="trackName">${json.track.name}</b>
+        <p id="artistName">${json.track.artist['#text']}</p>
+        </div>
+        `
+    };
+
+    getTrack();
+    setInterval(() => { getTrack(); }, 10000);
   });
 </script>
