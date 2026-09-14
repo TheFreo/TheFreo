@@ -119,11 +119,9 @@ import Image from "astro/components/Image.astro";
   }
 
   loadScript('https://bishoujopalace.neocities.org/WebRing/onionring/onionring-variables.js')
-    .then(() => loadScript('https://bishoujopalace.neocities.org/WebRing/onionring/onionring-widget.js'));
-</script>
-
-<script data-astro-rerun>
-  document.addEventListener('astro:page-load', () => {
-    document.getElementById('Icon').src="https://thefreo.moe/wr.gif";
-  });
+    .then(() => loadScript('https://bishoujopalace.neocities.org/WebRing/onionring/onionring-widget.js'))
+    .then(() => {
+      const icon = document.getElementById('Icon');
+      if (icon) icon.src = "https://thefreo.moe/wr.gif";
+    });
 </script>
