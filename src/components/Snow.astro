@@ -1,6 +1,18 @@
 ---
 ---
 
+<div id="snow-container" transition:persist></div>
+
+<style is:global>
+  #snow-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+  }
+</style>
+
 <script>
   const snowStorm = (function (window, document) {
     "use strict";
@@ -18,8 +30,8 @@
       followMouse: false,
       snowColor: "#fff",
       snowCharacter: "•", // using unicode bullet
-      snowStick: true,
-      targetElement: null, // null -> document.body
+      snowStick: false,
+      targetElement: "snow-container", // null -> document.body
       useMeltEffect: true,
       useTwinkleEffect: false,
       usePositionFixed: true,
@@ -563,4 +575,17 @@
     // expose storm for configuration before start
     return storm;
   })(window, document);
+
+    // возвращаем контейнер со снегом после каждой смены страницы
+  document.addEventListener("astro:after-swap", () => {
+    const old = snowStorm.targetElement;
+    if (!(old instanceof HTMLElement)) return; // снег ещё не стартовал
+
+    const fresh = document.getElementById("snow-container");
+    if (fresh && fresh !== old) {
+      fresh.replaceWith(old);          // заменяем пустой новый контейнер старым
+    } else if (!fresh) {
+      document.body.appendChild(old);  // на новой странице контейнера нет совсем
+    }
+  });
 </script>
